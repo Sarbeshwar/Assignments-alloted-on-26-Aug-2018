@@ -1,0 +1,25 @@
+import java.util.Scanner;
+public class pallindrom 
+{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        int orig_num=sc.nextInt();
+        int rem=0,num=0,temp=0;
+        num=orig_num;
+        while(orig_num!=0)
+        {
+            rem=orig_num%10;
+            temp=temp*10+rem;
+            orig_num/=10;
+        }
+        if(temp==num)
+        {
+            System.out.println("Pallindrom");
+        }
+        else
+        {
+            System.out.println("Not Pallindrom");
+        }
+    }
+}
